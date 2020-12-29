@@ -23,6 +23,9 @@ metadata:
     app: recommendation
     version: v1
 spec:
+  selector:
+    matchLabels:
+      app: recommendation
   replicas: 1
   template:
     metadata:
