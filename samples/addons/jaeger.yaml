@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jaeger
-  namespace: istio-system
+  namespace: jaeger
   labels:
     app: jaeger
 spec:
@@ -58,7 +58,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: tracing
-  namespace: istio-system
+  namespace: jaeger
   labels:
     app: jaeger
 spec:
@@ -77,8 +77,8 @@ kind: Service
 metadata:
   labels:
     name: zipkin
-  name: zipkin
-  namespace: istio-system
+  name: jaeger-jaeger-operator-jaeger-collector
+  namespace: jaeger
 spec:
   ports:
     - port: 9411
@@ -91,7 +91,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: jaeger-collector
-  namespace: istio-system
+  namespace: jaeger
   labels:
     app: jaeger
 spec:
