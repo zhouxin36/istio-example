@@ -12,7 +12,7 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "*"
+    - "weather.zhouxin.vip"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
@@ -33,7 +33,7 @@ metadata:
   namespace: weather
 spec:
   hosts:
-  - "*"
+  - "weather.zhouxin.vip"
   gateways:
   - weather/weather-gateway
   http:
