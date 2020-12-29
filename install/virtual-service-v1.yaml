@@ -4,9 +4,9 @@ metadata:
   name: frontend-route
 spec:
   hosts:
-  - "*"
+  - "weather.zhouxin.vip"
   gateways:
-  - istio-system/weather-gateway
+  - weather/weather-gateway
   http:
   - match:
     - port: 80
